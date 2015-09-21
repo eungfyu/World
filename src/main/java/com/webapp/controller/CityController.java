@@ -36,6 +36,11 @@ public class CityController {
 	@Autowired
 	CityCommandValidator validator;
 	
+	String getCities(){
+		return "";
+	}
+	
+	
 	@RequestMapping("/district/{countrycode:[A-Z]{3}}")//알파벳 3자리까지만 받는다
 	String getDistricts(@PathVariable String countrycode, Model model){//@PathVariable이 path에 있는 값을 countrycode에 넣는다.
 		log.info("getDistricts()... countryCode = " +countrycode);
